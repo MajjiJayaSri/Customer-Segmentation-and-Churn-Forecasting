@@ -1,0 +1,31 @@
+<!doctype html>
+<link>
+<head>
+    <title>Upload CSV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2 class="heading">Customer Segmentation & Churn Analysis</h2>
+  <div class="input_form">
+    <h2 class="h33">Upload Customer Data for Churn Forecasting</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <table class="tb" frame = "box" cellspacing="10"> 
+    <tr align="center"><br>
+    <tr class="row" align="center">
+      <td><h4 style="color: rgb(0, 183, 255);">Upload File : </h4></td>  
+      <td><input type="file" name="csv_file" accept=".csv" required></td>
+    </tr>
+    <td colspan="2"></td>
+    </tr> 
+
+    <tr align="center"><br>
+    <td colspan="2"><button class ="bt" type="submit">Forecast</button></td>
+    </tr>
+    </table>
+  </form>
+  </div>
+  <div>
+    <p class="note">Note: The uploading csv file must contain date, recency, Frequency, Monetary, R, F, M, churn_flag columns</p>
+  </div>
+</body>
+</html>

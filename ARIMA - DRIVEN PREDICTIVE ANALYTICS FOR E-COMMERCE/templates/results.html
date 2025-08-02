@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>Churn Forecast Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2 class="heading">Churn Forecast Results by Segment</h2>
+  <div class="c1">
+  {% for segment, filename in plots %}
+    <h3 class="hres">{{ segment }}</h3>
+    <img src="{{ url_for('static', filename='plots/' + filename) }}" width="60%">
+  {% endfor %}
+  </div>
+</body>
+</html>
